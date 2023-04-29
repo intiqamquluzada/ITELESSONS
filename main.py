@@ -37,8 +37,11 @@
 # i = range(6)
 # print(i)
 
-for i in range(5):
+# for i in range(5):
+#
+#     if i == 3:
+#         break
+#     print(i)
 
-    if i == 3:
-        break
-    print(i)
+a = "Hello, HorHd!"
+print(a.replace("H", "J"))
