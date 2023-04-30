@@ -43,6 +43,11 @@
 #         break
 #     print(i)
 
-a = "Hello, HorHd!"
-print(a.replace("H", "J"))
-print(555)
+# a = "Hello, Horld!"
+# print(a.replace("H", "J"))
+
+#
+# a = 'salam, yoldaslar'
+# b = a.split(',')
+# print(b)
+# print(a.capitalize())
