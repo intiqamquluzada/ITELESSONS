@@ -1,10 +1,10 @@
-class Package:
-    def __init__(self, id, sender, recipient, address):
+class Sifaris:
+    def __init__(self, id, gonderen, alici, address):
         self.id = id
-        self.sender = sender
-        self.recipient = recipient
+        self.gonderen = gonderen
+        self.alici = alici
         self.address = address
-        self.status = "Pending"
+        self.status = "Davam eden"
 
     def get_status(self):
         return self.status
@@ -12,11 +12,12 @@ class Package:
     def set_status(self, status):
         self.status = status
 
-class Delivery:
-    def __init__(self, courier, package):
-        self.courier = courier
-        self.package = package
-        self.status = "Pending"
+
+class Catdirilma:
+    def __init__(self, kuryer, sifaris):
+        self.kuryer = kuryer
+        self.sifaris = sifaris
+        self.status = "Davam eden"
 
     def get_status(self):
         return self.status
@@ -24,7 +25,8 @@ class Delivery:
     def set_status(self, status):
         self.status = status
 
-class Courier:
+
+class Kuryer:
     def __init__(self, id, name):
         self.id = id
         self.name = name
@@ -36,7 +38,8 @@ class Courier:
     def get_deliveries(self):
         return self.deliveries
 
-class DeliverySystem:
+
+class CatdirilmaSistemi:
     def __init__(self):
         self.packages = []
         self.couriers = []
@@ -54,11 +57,11 @@ class DeliverySystem:
         return self.couriers
 
     def assign_delivery(self, courier, package):
-        delivery = Delivery(courier, package)
+        delivery = Catdirilma(courier, package)
         courier.add_delivery(delivery)
-        package.set_status("In Transit")
-        delivery.set_status("In Transit")
+        package.set_status("Yolda")
+        delivery.set_status("Yolda")
 
     def complete_delivery(self, delivery):
-        delivery.set_status("Delivered")
-        delivery.package.set_status("Delivered")
+        delivery.set_status("Catdirildi")
+        delivery.package.set_status("Catdirildi")
