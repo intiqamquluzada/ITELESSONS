@@ -110,7 +110,7 @@ OLUNDUGU YERDEKI DEYERDEN GOTURECEKDI.
 """
 
 # ---------------------------------------------------------------------------
-
+print("")
 """
 Istifadəçidən x və y dəyişənləri vasitəsilə götürülən həqiqi ədədlərin ən kiçiyini
  almaq üçün pythonkodu yazın,
