@@ -108,7 +108,7 @@ c ve d ise inner funksiyasinin lokal deyisenidir. Eger bu deyisenlerden her hans
 qarsisina global yazmagimiz kifayet idi. vE BU ZAMAN DEYERINI FUNKSIYANIN ICINDEN DEYIL YUXARIDA ELAN
 OLUNDUGU YERDEKI DEYERDEN GOTURECEKDI.
 """
-
+print(44444)
 # ---------------------------------------------------------------------------
 
 """
