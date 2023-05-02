@@ -109,6 +109,7 @@ qarsisina global yazmagimiz kifayet idi. vE BU ZAMAN DEYERINI FUNKSIYANIN ICINDE
 OLUNDUGU YERDEKI DEYERDEN GOTURECEKDI.
 """
 print(44444)
+print(55555)
 # ---------------------------------------------------------------------------
 
 """
