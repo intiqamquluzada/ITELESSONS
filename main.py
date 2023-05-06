@@ -209,7 +209,7 @@ qoya-qoya ededin reqemlerinin cemi tapilacaq
 """
 adi kesrlerin toplanmasi qaydasindan istifade edirik
 """
-#---------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------
 
 # a və b tam ədədləri üçün a üstü b qüvvətini rekursiv üsulla hesablayan funksiya yazın
 
@@ -229,4 +229,119 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 
 """
 
-#------------------------------------------------------------------
+# ------------------------------------------------------------------
+
+
+# num = int(input("Rəqəmi daxil edin: "))
+#
+# count = 0
+# for i in range(1, 101):
+#     if str(num) in str(i):
+#         count += 1
+# print(count)
+
+
+# cumle = input("Cümlə daxil edin: ")
+#
+# # Cümləni sözlərə bölürük
+# sozler = cumle.split()
+# mystr = ""
+# for soz in sozler:
+#
+#     soz = "".join(sorted(soz))
+#     mystr = mystr + soz + " "
+#
+#
+# print(mystr)
+
+# -------------------------------------------------------------------------------
+
+# 1) 1-dən 100-dək ədədlər içində neçə ədəddə istifadəçi tərəfindən daxil edilən rəqəm var?
+# eded = int(input("Ededi daxil edin: "))
+# saygac = 0
+# for i in range(1, 101):
+#     if str(eded) in str(i):
+#         saygac += 1
+# print(saygac)
+
+# 2) 1-dən 100-dək ədədlər içində ümumilikdə istifadəçidən götürülən rəqəm neçə dəfə istifadə olunmuşdur?
+# eded = input("Ededi daxil edin: ")
+# a = ""
+# for i in range(1, 101):
+#     a += str(i)
+# print(a.count(eded))
+
+# 3) Daxil edilmiş cümlənin bütün sözlərini alfabetik düzülüşlü sözlərə çevirib nəticəni çap edin.
+
+# cumle = input("Cumleni daxil edin: ")
+# cumle_list = cumle.split()
+# string = ""
+# for i in cumle_list:
+#     soz = "".join(sorted(i))
+#     string = string + soz + " "
+#
+# print(string)
+
+# 4) Verilmiş cümlədə tərsdən yazılışı özü ilə eyni olan (palindromik söz) neçə söz var?
+# cumle = input("Cumleni daxil edin: ")
+# saygac = 0
+# cumle_list = cumle.split()
+# for soz in cumle_list:
+#     if soz == soz[-1::-1]:
+#         saygac += 1
+# print(saygac)
+
+# 5) İki zəri 10 dəfə atarkən qoşa düşən halların sayınının düşməyən halların sayına nisbətini hesablayın.
+
+# zer1 = [1, 2, 3, 4, 5, 6]
+# zer2 = [1, 2, 3, 4, 5, 6]
+#
+# qosa = 0
+# adi = 0
+# a = 10
+# while a > 0:
+#     for i in zer1:
+#         for j in zer2:
+#             if i == j:
+#                 qosa += 1
+#             else:
+#                 adi += 1
+#     a -= 1
+# print(qosa/adi )
+
+
+# 6) Ad və Soyadlardan ibarət siyahı verilir.Bu siyahını istifadə etməklə ad.soyad@trainer.edu.az maillərini
+#    düzəldən Python kodu yazın.
+
+# siyahi = ['Intiqam Quluzade', 'Etibar Vezirov', 'Vali Aliyev', 'Iltifat Quliyev', 'Fateh Quliyev']
+# qelib = "@trainer.edu.az"
+# details = {}
+# details_list = []
+# for i in siyahi:
+#     email_user = ".".join(i.lower().split()) + qelib
+#     details[i] = email_user
+#     details_list.append(email_user)
+#     email_user = ""
+# print(details)
+# print(details_list)
+
+
+# 7) Indi isə 6-cı məsələdə alınan maillər siyahısını götürüb onların əsasında ad və soyadlardan ibarət bir
+#    siyahı düzəldin.
+
+# siyahi = ['intiqam.quluzade@trainer.edu.az', 'etibar.vezirov@trainer.edu.az', 'vali.aliyev@trainer.edu.az',
+#           'iltifat.quliyev@trainer.edu.az', 'fateh.quliyev@trainer.edu.az']
+# ad_soyad = ""
+# yeni_siyahi = []
+# for i in siyahi:
+#     for j in i:
+#         if j == "@":
+#             break
+#         ad_soyad += j
+#         ad_list = ad_soyad.split(".")
+#         for u in range(len(ad_list)):
+#             ad_list[u] = ad_list[u].capitalize()
+#         tam_ad = " ".join(ad_list)
+#     yeni_siyahi.append(tam_ad)
+#     ad_soyad = ""
+# print(yeni_siyahi)
