@@ -65,3 +65,5 @@ class CatdirilmaSistemi:
     def complete_delivery(self, delivery):
         delivery.set_status("Catdirildi")
         delivery.package.set_status("Catdirildi")
+
+print(555)
