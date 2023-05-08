@@ -345,3 +345,16 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 #     yeni_siyahi.append(tam_ad)
 #     ad_soyad = ""
 # print(yeni_siyahi)
+
+
+# b_array = bytearray(b'Hello World!')
+# print(type(b_array))  # bytearray(b'Hello World!')
+# b_array[0:5] = b'python'
+# print(b_array)
+#
+
+
+# bytes_obj = bytes('string', 'utf-8')
+# bytes_obj[0] = 'x'
+# print(bytes_obj)
+# print(bytes_obj[0])
