@@ -423,14 +423,14 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 #     elif eded > user_eded:
 #             print("yuxariya qalxin")
 
-# eded = 2
-# start = 1
-# end = 200
-# powers = [1, ]
-# k = 1
-# for i in range(start + 1, end):
-#     power = eded ** k
-#     k += 1
-#     if power >= start and power <= end:
-#         powers.append(power)
-# print(powers)
+eded = 2
+start = 1
+end = 200
+powers = [1, ]
+k = 1
+for i in range(start + 1, end):
+    power = eded ** k
+    k += 1
+    if power >= start and power <= end:
+        powers.append(power)
+print(powers)
