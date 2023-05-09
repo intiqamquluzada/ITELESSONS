@@ -397,9 +397,9 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 # assert a > b, "a böyükdür b-dən!"
 
 
-import numpy as np
-
-matrix = np.array([[3, 2, 1],
-                   [1, 3, 4],
-                   [2, 1, 3]])
-print(np.max(np.min(matrix, axis=1)))
+# import numpy as np
+#
+# matrix = np.array([[3, 2, 1],
+#                    [1, 3, 4],
+#                    [2, 1, 3]])
+# print(np.max(np.min(matrix, axis=1)))
