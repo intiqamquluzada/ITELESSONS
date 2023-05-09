@@ -313,14 +313,20 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 # 6) Ad və Soyadlardan ibarət siyahı verilir.Bu siyahını istifadə etməklə ad.soyad@trainer.edu.az maillərini
 #    düzəldən Python kodu yazın.
 
-# siyahi = ['Intiqam Quluzade', 'Etibar Vezirov', 'Vali Aliyev', 'Iltifat Quliyev', 'Fateh Quliyev']
+# siyahi = ['Intiqam Quluzade', 'Etibar Vezirov', 'Vali Aliyev', 'Iltifat Quliyev', 'Fateh Quliyev', 'Intiqam Quluzade', 'Intiqam Quluzade', 'Fateh Quliyev']
 # qelib = "@trainer.edu.az"
 # details = {}
 # details_list = []
+# bos_list = []
 # for i in siyahi:
-#     email_user = ".".join(i.lower().split()) + qelib
+#     email_user = ".".join(i.lower().split())
 #     details[i] = email_user
+#     bos_list.append(email_user)
+#     if bos_list.count(email_user) > 1:
+#         email_user += f"{bos_list.count(email_user)}"
+#     email_user += qelib
 #     details_list.append(email_user)
+#
 #     email_user = ""
 # print(details)
 # print(details_list)
@@ -358,3 +364,42 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 # bytes_obj[0] = 'x'
 # print(bytes_obj)
 # print(bytes_obj[0])
+
+
+# sum = 0
+# for i in range(10, 100):
+#     if i % 2 == 0:
+#         continue
+#     sum += i
+# print(sum)
+#
+#
+# # for i in range(10,100):
+# #     if i % 2 != 0:
+# #         sum += i
+# # print(sum)
+
+
+# a = [4, 12, 7, 5, 24, 3, 11, 26, 10]
+#
+# cem = 0
+# hasil = 1
+#
+# for i in a:
+#     cem = cem + i
+#     if i % 2 == 1:
+#         hasil = hasil * i
+# print(cem, hasil)
+
+
+# a = 5
+# b = 10
+# assert a > b, "a böyükdür b-dən!"
+
+
+import numpy as np
+
+matrix = np.array([[3, 2, 1],
+                   [1, 3, 4],
+                   [2, 1, 3]])
+print(np.max(np.min(matrix, axis=1)))
