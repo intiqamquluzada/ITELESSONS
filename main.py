@@ -403,3 +403,34 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 #                    [1, 3, 4],
 #                    [2, 1, 3]])
 # print(np.max(np.min(matrix, axis=1)))
+
+# myfunc = lambda eded, baslangic, son: "solunda" if eded < baslangic else "saginda" if eded > son else "daxilinde"
+#
+# print(myfunc(5, 4, 7))
+# import random
+# eded = random.randint(1, 100)
+# print(eded)
+# cehd = 0
+# while True:
+#     user_eded = int(input("Daxil et: "))
+#     cehd += 1
+#     if user_eded == eded:
+#         print('tapdiniz')
+#         print(cehd)
+#         break
+#     elif eded < user_eded:
+#             print("asagiya dusun")
+#     elif eded > user_eded:
+#             print("yuxariya qalxin")
+
+# eded = 2
+# start = 1
+# end = 200
+# powers = [1, ]
+# k = 1
+# for i in range(start + 1, end):
+#     power = eded ** k
+#     k += 1
+#     if power >= start and power <= end:
+#         powers.append(power)
+# print(powers)
