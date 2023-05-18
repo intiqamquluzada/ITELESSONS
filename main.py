@@ -108,6 +108,7 @@ c ve d ise inner funksiyasinin lokal deyisenidir. Eger bu deyisenlerden her hans
 qarsisina global yazmagimiz kifayet idi. vE BU ZAMAN DEYERINI FUNKSIYANIN ICINDEN DEYIL YUXARIDA ELAN
 OLUNDUGU YERDEKI DEYERDEN GOTURECEKDI.
 """
+import random
 
 # ---------------------------------------------------------------------------
 
@@ -313,14 +314,15 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 # 6) Ad və Soyadlardan ibarət siyahı verilir.Bu siyahını istifadə etməklə ad.soyad@trainer.edu.az maillərini
 #    düzəldən Python kodu yazın.
 
-# siyahi = ['Intiqam Quluzade', 'Etibar Vezirov', 'Vali Aliyev', 'Iltifat Quliyev', 'Fateh Quliyev', 'Intiqam Quluzade', 'Intiqam Quluzade', 'Fateh Quliyev']
+# siyahi = ['Intiqam Quluzade', 'Etibar Vezirov', 'Vali Aliyev', 'Iltifat Quliyev', 'Fateh Quliyev', 'Intiqam Quluzade',
+#           'Intiqam Quluzade', 'Fateh Quliyev']
 # qelib = "@trainer.edu.az"
-# details = {}
+# # details = {}
 # details_list = []
 # bos_list = []
 # for i in siyahi:
 #     email_user = ".".join(i.lower().split())
-#     details[i] = email_user
+#     # details[i] = email_user
 #     bos_list.append(email_user)
 #     if bos_list.count(email_user) > 1:
 #         email_user += f"{bos_list.count(email_user)}"
@@ -328,9 +330,8 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 #     details_list.append(email_user)
 #
 #     email_user = ""
-# print(details)
+# # print(details)
 # print(details_list)
-
 
 # 7) Indi isə 6-cı məsələdə alınan maillər siyahısını götürüb onların əsasında ad və soyadlardan ibarət bir
 #    siyahı düzəldin.
@@ -423,14 +424,698 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 #     elif eded > user_eded:
 #             print("yuxariya qalxin")
 
-eded = 2
-start = 1
-end = 200
-powers = [1, ]
-k = 1
-for i in range(start + 1, end):
-    power = eded ** k
-    k += 1
-    if power >= start and power <= end:
-        powers.append(power)
-print(powers)
+# eded = 2
+# start = 1
+# end = 200
+# powers = [1, ]
+# k = 1
+# for i in range(start + 1, end):
+#     power = eded ** k
+#     k += 1
+#     if power >= start and power <= end:
+#         powers.append(power)
+# print(powers)
+
+# eded=3
+# baslangic=10
+# son=250
+
+# num = 55550
+# dict = {
+#     5: 4,
+#     0: 1
+# }
+
+# 5) Daxil edilən çoxrəqəmli ədədin hər bir rəqəmini və onun sayını lüğət elementləri kimi bir lüğət daxilində göstərin.
+# eded = input("Ededi daxil edin: ")
+# mydict = {}
+# for reqem in eded:
+#     mydict[reqem] = eded.count(reqem)
+# print(mydict)
+
+
+# ------------------
+# setir = int(input("Setir sayini daxil edin: "))
+# sutun = int(input("Sutun sayini daxil edin: "))
+#
+# matris = []
+#
+# for i in range(setir):
+#     sira = []
+#     for j in range(sutun):
+#         sira.append(0)
+#     matris.append(sira)
+# print(matris)
+# saygac=1
+# for i in range(setir):
+#     for j in range(sutun):
+#         matris[i][j] = saygac
+#         saygac += 1
+# print(matris)
+# # for i in range(setir):
+# #     for j in range(sutun):
+# #         print(matris[i][j], end=" ")
+# #     print()
+#
+# for row in matris:
+#     print(row)
+# ------------------------------------------
+
+# setir = int(input("Setir sayini daxil edin: "))
+# sutun = int(input("Sutun sayini daxil edin: "))
+# matris = []
+#
+#
+# for i in range(setir):
+#     sira = []
+#     for j in range(sutun):
+#         sira.append(0)
+#     matris.append(sira)
+#
+#
+# for i in range(setir):
+#     for j in range(sutun):
+#         if i == j:
+#             matris[i][j] = 1
+# print(matris)
+
+# -----------------------------------------
+
+# baslangic = int(input("birinci eded: "))
+# son = int(input("son: "))
+#
+# cem = 0
+# hasil = 1
+# mylist = []
+# for i in range(baslangic, son):
+#     cem = 0
+#     hasil = 1
+#     for j in str(i):
+#         cem += int(j)
+#         hasil *= int(j)
+#     print(cem > hasil)
+#
+#     if cem > hasil:
+#         mylist.append(i)
+#     print(cem)
+#     print(hasil)
+#
+#
+# print(mylist)
+
+# --------------------------------------------------------------------------------------
+
+# 1   2   3   4
+# 0   6   7   8
+# 0   0  11  12
+
+# setir = int(input("setir sayini daxil edin: "))
+# sutun = int(input("sutun sayini daxil edin: "))
+#
+# yuxari_ucbucaq_matris = []
+#
+# for i in range(setir):
+#     sira = []
+#     for j in range(sutun):
+#         sira.append(0)
+#     yuxari_ucbucaq_matris.append(sira)
+# saygac = 1
+# for i in range(setir):
+#     for j in range(sutun):
+#         if i <= j:
+#             yuxari_ucbucaq_matris[i][j] = saygac
+#         saygac += 1
+# #asagi
+# for i in range(setir):
+#     sira_2 = []
+#     for j in range(sutun):
+#         sira_2.append(0)
+#     asagi_ucbucaq_matris.append(sira_2)
+#
+# #yuxari
+#
+
+#
+# #asagi
+# saygac_ = 1
+# for i in range(setir):
+#     for j in range(sutun):
+#         if i >= j:
+#             asagi_ucbucaq_matris[i][j] = saygac_
+#         saygac_ += 1
+# print(yuxari_ucbucaq_matris)
+#
+# print(asagi_ucbucaq_matris)
+#
+# for row in asagi_ucbucaq_matris:
+#     print(row)
+
+# -----------------------------------------------------------------------------------
+
+# setir = int(input("setir sayini daxil edin: "))
+# sutun =  int(input("sutun sayini daxil edin: "))
+
+
+# 1   0   1   0
+# 0   1   0   1
+# 1   0   1   0
+
+# matris = []
+#
+# for i in range(setir):
+#     sira = []
+#     for j in range(sutun):
+#         sira.append(0)
+#     matris.append(sira)
+#
+# for i in range(setir):
+#     for j in range(sutun):
+#         if (i + j) % 2 == 0:
+#             matris[i][j] = 1
+#
+# print(matris)
+# for row in matris:
+#     print(row)
+
+# ------------------------------------------------------------------------------
+
+# matris_1 = [[1, 2, 3], [4, 5, 6]]
+# matris_2 = [[2, 3, 5], [3, 6, -8], [1, 2, 1]]
+#
+# for row in matris_1:
+#     print(row)
+# print()
+# for x in matris_2:
+#     print(x)
+#
+# yeni_matris = []
+#
+
+#
+# a = int(input("a-ni daxil edin: "))
+# b = int(input("b-ni daxil edin: "))
+#
+# mylist = []
+#
+# for i in range(a, b):
+#     for j in range(2, i):
+#         if i % j == 0 and int(str(i)[::-1]) % j == 0:
+#             continue
+#
+#
+# print(mylist)
+
+# import random
+
+# ad = input("Adi daxil edin:")
+# soyad = input("Soyadi daxil edin: ")
+# birthday = input("dogum tarixi: ")
+# fin = input("fin: ")
+# mystr = ""
+#
+# mystr += ad + soyad + birthday + fin
+# parol_str = ""
+# for i in mystr:
+#     if i.isalnum():
+#         parol_str += i
+# sifre = random.sample(parol_str, 7)
+# print("".join(sifre))
+
+# ----------------------------------------------------------
+
+# import random
+#
+# while True:
+#     number = random.randint(10, 1000000000)
+#     if len(str(number)) % 2 == 0:
+#         print(number)
+#         break
+
+# ----------------------------------------------------------------
+
+
+"""
+3cu meselede alinan cut sayda reqemden ibaret ededdde ilk reqemden baslayaraq her bir reqem ozunden
+sonraki reqemin sayini gosterirse bu saylari yazmaqla alinan yeni ededi cap edin
+
+# 251430
+# 554000
+"""
+
+# num_str = str(number)
+# son_eded = ""
+# for i in range(len(num_str)):
+#     if int(i) % 2 == 0:
+#         son_eded += str(int(num_str[i]) * str(num_str[i+1]))
+# print(son_eded)
+
+# -----------------------------------------------------------------------------
+
+"""
+matris1 = [
+                [1,2],
+                [7,3]
+            ]
+matris2 = [
+                [2,3,6,4],
+                [3,6,-8,5],
+            ]
+z[0][0] = x[0][0] * y[0][0] + x[0][1] * y[1][0]
+z[0][1] = x[0][0] * y[0][1] + x[0][1] * y[1][1]
+z[0][2] = x[0][0] * y[0][2] + x[0][1] * y[1][2]
+z[0][3] = x[0][0] * y[0][3] + x[0][1] * y[1][3]
+
+z[1][0] = x[1][0] * y[0][0] + x[1][1] * y[1][0] 
+z[1][1] = x[1][0] * y[0][1] + x[1][1] * y[1][1]
+z[1][2] = x[1][0] * y[0][2] + x[1][1] * y[1][2]
+z[1][3] = x[1][0] * y[0][3] + x[1][1] * y[1][3]
+
+z = [
+
+    [z[0][0],z[0][1], z[0][2], z[0][3]],
+    [z[1][0], z[1][1], z[1][2], z[1][3]]
+
+    ]
+"""
+
+
+# matris1 = [
+#                 [1,2],
+#                 [7,3]
+#             ]
+# matris2 = [
+#                 [2,3,6,4],
+#                 [3,6,-8,5],
+#             ]
+#
+# z = [[],[],[]]
+#
+# for i in range(len(matris1)):
+#     for j in range(len(matris1[0])):
+#         for a in range(len(matris2[0])):
+#             pass
+
+
+# ----------------------------------------------------------
+# num = int(input("Ededi daxil edin: "))
+#
+# num_str = str(num)
+# bos_str = ''
+# for i in range(len(num_str)):
+#     uzunluq = len(num_str)
+#     sagda_qalan_reqemler_sayi = uzunluq - i - 1
+#     bos_str += str(int(num_str[i]) * (10 ** sagda_qalan_reqemler_sayi))
+#     print(bos_str)
+#
+# print(bos_str)
+
+# -----------------------------------------------------------------
+
+# 4000500708
+# 4578
+
+# eded = input("Ededi daxil edin: ")
+# saygac = 0
+# teze_eded = 0
+# for i in range(len(eded)):
+#     if eded[i] == 0:
+#         saygac += 1
+#
+#     saygac = 0
+
+
+# import matplotlib.pyplot as plt
+# import numpy as np
+#
+# # 3x3 boyutunda matris oluşturma
+# matrix = np.zeros((3, 3))
+# # Matrisi çizme
+# plt.imshow(matrix, cmap='binary', interpolation='none')
+# plt.xticks(range(3))
+# plt.yticks(range(3))
+# plt.grid(True)
+# plt.show()
+#
+# # Oyuncuların hamleleri
+# matrix[0][0] = 1
+# matrix[1][1] = 2
+#
+# # Matrisi güncelleme ve tekrar çizme
+# plt.imshow(matrix, cmap='binary', interpolation='none')
+# plt.xticks(range(3))
+# plt.yticks(range(3))
+# plt.grid(True)
+# plt.show()
+
+# matris = [
+#     [-3, -2, 6],  # setir
+#     [2, 1, 2],  # setir
+#     [5, -2, -4]  # setir
+#     #  sutun
+# ]
+#
+# minimum_deyerler_setir_list = []
+# for setir in matris:
+#     minimum_deyerler_setir_list.append(min(setir))
+#
+# maksimum_deyerler_sutun_list = []
+# for sutun in zip(*matris):
+#     maksimum_deyerler_sutun_list.append(max(sutun))
+#
+#
+# def simplex_function():
+#     pass
+#
+# # Burda yoxlayaq gorek listlerden maks ve min deyerler birbirine beraberdirmi ?
+#
+# def netice(maks, minimum):
+#     if maks == minimum:
+#         return f"Hell noqtesi: {maks}"
+#     simplex_function()
+#
+#
+#
+# print(netice(max(minimum_deyerler_setir_list), min(maksimum_deyerler_sutun_list)))
+
+
+# # Mükafatlar
+# T = 5   # İddia
+# R = 3   # Mükafat
+# P = 1   # Cəza
+# S = 0   # Adi dəyər
+#
+# # Strategiyaların müəyyənləşdirilməsi
+# C = 0   # Birlik
+# D = 1   # Ayrılıq
+#
+# # Oyun matirisimizin müəyyənləşdirilməsi
+# game_matrix = {
+#     (C, C): (R, R),
+#     (C, D): (S, T),
+#     (D, C): (T, S),
+#     (D, D): (P, P)
+# }
+#
+# # Oyunçuların  hal-hazırki strategiyaları
+# player1_strategy = C
+# player2_strategy = D
+#
+# # Mükafatların əldə edilməsi
+# player1_payoff, player2_payoff = game_matrix[(player1_strategy, player2_strategy)]
+#
+# # Nəticələrin çapı
+# print(f"Player 1 strategy: {player1_strategy}")
+# print(f"Player 2 strategy: {player2_strategy}")
+# print(f"Player 1 payoff: {player1_payoff}")
+# print(f"Player 2 payoff: {player2_payoff}")
+
+
+# cumle = input("Cumleni daxil et: ")
+#
+# cumle_list = cumle.split()
+#
+# en_uzun_str = ''
+#
+# for soz in cumle_list:
+#     if len(soz) > len(en_uzun_str):
+#         en_uzun_str = soz
+#
+# matris = []
+# for i in range(len(cumle_list)):
+#     setir = []
+#     for j in range(len(en_uzun_str)):
+#         setir.append("*")
+#     matris.append(setir)
+#
+# for i in range(len(cumle_list)):
+#     for j in range(len(en_uzun_str)):
+#
+# print(matris)
+
+# print(matris)
+#
+#
+# print(matris)
+
+
+# random_ededler = random.sample(range(1, 11), 7)
+#
+# for i in range(len(random_ededler)):
+#     for j in range
+# -------------------------------------------------------------------
+
+
+# from scipy.optimize import linprog
+
+
+# c = [-2, -3, -4]
+#
+# A = [[3, 2, 1], [2, 5, 3], [4, 2, 2]]  # 3x1 + 2x2 + x3 <= 10, 2x1 + 5x2 + 3x3 <= 15, 4x1 + 2x2 + 2x3 <= 8
+# b = [10, 15, 8]
+#
+# x1_serhed = (0, None)  # x1 >= 0
+# x2_serhed = (0, None)  # x2 >= 0
+# x3_serhed = (0, None)  # x3 >= 0
+
+# simpleks metodu tetbiqi
+# result = linprog(c, A_ub=A, b_ub=b, bounds=[x1_serhed, x2_serhed, x3_serhed], method='highs')
+
+# print("Optimal deyer:", -result.fun)
+
+
+# ---------------------------------------------------------------------------
+
+
+# def harmonic_mean(lst):
+#     cem = 0
+#
+#     def inverse_sum(lst):
+#         nonlocal cem
+#
+#         for i in lst:
+#             if i != 0:
+#                 cem += (1 / i)
+#
+#         return len(lst)/cem
+#
+#     return inverse_sum(lst)
+#
+#
+# mylist = [4, 6, 32, 2, 9, 0]
+# print(harmonic_mean(mylist))
+
+
+# -----------------------------------------------------------------
+
+def four_metrics(lst):
+    def mean(lst):
+        return sum(lst) / len(lst)
+
+    def median(lst):
+        if len(lst) % 2 != 0:
+            return sorted(lst)[len(lst) // 2]
+        return (sorted(lst)[len(lst) // 2] + sorted(lst)[len(lst) // 2 - 1]) / 2
+
+    def moda(lst):
+        max_tekrar = 0
+        for i in lst:
+            if lst.count(i) > 1 and lst.count(i) > max_tekrar:
+                max_tekrar = i
+        return max_tekrar
+
+    def diapazon(lst):
+        return max(lst) - min(lst)
+
+    return [median, mean, moda, diapazon]
+
+
+mylist = [4, 6, 2, 23, 0, 1, 9, -5, 2]
+
+
+# m1 = four_metrics(mylist)[0]
+# m2 = four_metrics(mylist)[1]
+# m3 = four_metrics(mylist)[2]
+# m4 = four_metrics(mylist)[3]
+#
+# print(m1(mylist))
+# print(m2(mylist))
+# print(m3(mylist))
+# print(m4(mylist))
+
+# --------------------------------------------------------------
+
+#
+# def findelem(n):
+#
+#     if n == 1:
+#         return 2
+#     return findelem(n-1) + 3
+#
+# print(findelem(5))
+
+
+# ------------------------------------------------------------
+
+# def sum_with_rec(lst):
+#     if len(lst) == 0:
+#         return 0
+#     return lst[0] + sum_with_rec(lst[1:])
+#
+#
+# mylist = [2, 4, 56, 73, -56, 34]
+# print(sum_with_rec(mylist))
+
+
+# --------------------------------------------------------------
+# 3, 7, 15, 31, ... ədədi ardıcıllığının istənilən nömrədəki elementini qaytaran rekursiv funksiya tərtib edin.
+#     İnput: 3                 İnput: 6
+#     Output: 15			   Output: 127
+
+
+# a1 = 3
+# a2 = a1 + 2 ** 1
+# a3 = a2 + 2 ** 2
+# a4 = a3 + 2 ** 3
+# ...
+# an = an-1 + 2**n-1
+
+
+# def num_find_rec(n):
+#     if n == 1:
+#         return 3
+#     return num_find_rec(n - 1) + 2 ** n
+#
+#
+# print(num_find_rec(3))
+
+
+# --------------------------------------------------------
+
+# 6) 5-ci məsələdəki ədədi ardıcıllığın istənilən nömrəsinədək olan bütün elementlərini çap edən rekursiv funksiya tərtib edin.
+#     İnput: 3                     İnput: 6
+#     Output: 3 7 15		       Output: 3  7  15  31   63   127
+
+
+# def nums_rec(n):
+#     if n == 1:
+#         return 3
+#     return nums_rec(n - 1) + 2 ** n
+#
+#
+# print(nums_rec(6))
+#
+# def print_sequence(n):
+#     if n == 1:
+#         return 3
+#     else:
+#         print_sequence(n-1)
+#         element = 2**n - 1
+#         print(element, end=" ")
+#
+# # Örnek kullanım
+# print_sequence(7)
+# -----------------------------------------------
+# def mean(lst):
+#     mean_value = sum(lst) / len(lst)
+#     return mean_value
+#
+#
+# def mean_diff_sqr(mean, lst):
+#     new_list = []
+#     for i in lst:
+#         new_list.append((i-mean(lst))**2)
+#
+# def std(mean_diff_sqr, mean):
+#     x = lambda lst:
+
+# ----------------------------------------------
+
+# 5)  3, 7, 15, 31, ... ədədi ardıcıllığının istənilən nömrədəki elementini qaytaran rekursiv funksiya tərtib edin.
+#     İnput: 3                     İnput: 6
+#     Output: 15			        Output: 127
+
+
+# a1 = 3
+# a2 = a1 + 2 ** 1
+# a3 = a2 + 2 ** 2
+# a4 = a3 + 2 ** 3
+# ...
+# an = an-1 + 2**n
+
+
+# def find_num_rec(n):
+#     if n == 1:
+#         return 3
+#     return find_num_rec(n-1) + 2**n
+#
+# print(find_num_rec(3), find_num_rec(6))
+
+
+# ---------------------------------------------------
+
+
+# paskal = [
+#
+#     [1],
+#     [1, 1],
+#     [1, 2, 1],
+#     [1, 3, 3, 1],
+#     [1, 4, 6, 4, 1],
+#
+# ]
+#
+#
+# def pascal_ucbucagi(n):
+#     triangle = []
+#     for i in range(n):
+#         row = []
+#         for j in range(i + 1):
+#             if j == 0 or j == i:
+#                 row.append(1)
+#             else:
+#                 element = triangle[i - 1][j - 1] + triangle[i - 1][j]
+#                 row.append(element)
+#         triangle.append(row)
+#     return triangle
+#
+#
+# print(pascal_ucbucagi(4))
+
+
+# ------------------------------------------------------
+
+
+# def mult_with_rec(num1, num2):
+#     if num1 == 0 or num2 == 0:
+#         return 0
+#     return num1 + mult_with_rec(num1, num2 - 1)
+#
+#
+# print(mult_with_rec(11, 6))
+
+
+# def myfunc(num, exponent):
+#     if exponent == 0:
+#         return 1
+#     return num * myfunc(num, exponent - 1)
+#
+#
+# print(myfunc(3, 4))
+
+
+#
+# def cem_cut(n):
+#     if n == 0:
+#         return 0
+#     else:
+#         son_reqem = n % 10
+#         if son_reqem % 2 == 0:
+#             return son_reqem + cem_cut(n//10)
+#         else:
+#             return cem_cut(n//10)
+#
+#
+# print(cem_cut(23454))
+
+
+print(pow(0,0))
