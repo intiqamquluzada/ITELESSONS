@@ -1110,12 +1110,75 @@ mylist = [4, 6, 2, 23, 0, 1, 9, -5, 2]
 #     else:
 #         son_reqem = n % 10
 #         if son_reqem % 2 == 0:
-#             return son_reqem + cem_cut(n//10)
+#             return son_reqem + cem_cut(n // 10)
 #         else:
-#             return cem_cut(n//10)
+#             return cem_cut(n // 10)
+#
+#
+# def tek_hasil(n):
+#     if n == 0:
+#         return 1
+#     else:
+#         son_reqem = n % 10
+#         if son_reqem % 2 != 0:
+#             return son_reqem * tek_hasil(n // 10)
+#         else:
+#             return tek_hasil(n // 10)
 #
 #
 # print(cem_cut(23454))
+# print(tek_hasil(23454))
+# x = 10
+# result = "Böyük" if x > 10 else "beraber" if x == 10 else "kicik"
+# print(result)
+#
+# num = 153
+# is_armstrong = lambda number: "Armstrongdur" if sum(int(digit) ** len(str(number)) for digit in str(number)) == number else "Armstrong deyil"
+# print(is_armstrong(num))
+
+#-------------------------------------------------------------------------
+
+# def matris_rec(n1, n2):
+#     if n1 == 1 and n2 == 1:
+#         return [1]
+#     return
 
 
-print(pow(0,0))
+# import numpy as np
+
+
+def kapitsa_model(initial_population, birth_rate, death_rate, migration_rate, years):
+    population = [initial_population]
+
+    for year in range(1, years + 1):
+        births = population[year - 1] * birth_rate
+        deaths = population[year - 1] * death_rate
+        migrations = population[year - 1] * migration_rate
+
+        new_population = population[year - 1] + births - deaths + migrations
+        population.append(new_population)
+
+    return population
+
+
+# Başlanğıc əhali sayı
+initial_population = 1000000
+
+# Doğum dərəcəsi
+birth_rate = 0.02
+
+# Ölüm dərəcəsi
+death_rate = 0.01
+
+# Göç dərəcəsi
+migration_rate = 0.005
+
+# Proqnozlaşdırılacaq illərin sayı
+years = 200
+
+# Kapitsa modelinin tətbiqi
+population_projection = kapitsa_model(initial_population, birth_rate, death_rate, migration_rate, years)
+
+# Proqnozlaşdırılmış əhali sayı çıxışı
+for year in range(len(population_projection)):
+    print(f"{year}: {int(population_projection[year])}")
