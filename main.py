@@ -931,7 +931,6 @@ def four_metrics(lst):
 
 mylist = [4, 6, 2, 23, 0, 1, 9, -5, 2]
 
-
 # m1 = four_metrics(mylist)[0]
 # m2 = four_metrics(mylist)[1]
 # m3 = four_metrics(mylist)[2]
@@ -1133,10 +1132,23 @@ mylist = [4, 6, 2, 23, 0, 1, 9, -5, 2]
 # print(result)
 #
 # num = 153
-# is_armstrong = lambda number: "Armstrongdur" if sum(int(digit) ** len(str(number)) for digit in str(number)) == number else "Armstrong deyil"
+# is_armstrong = lambda num: "Armstrongdur" if sum(
+#     int(reqem) ** len(str(num)) for reqem in str(num)) == num else "Armstrong deyil"
 # print(is_armstrong(num))
+# #
+# #
+# arm_nums = lambda left, right, is_armstrong: [num for num in range(left, right) if is_armstrong(num) == "Armstrongdur"]
+# print(arm_nums(100, 1000, is_armstrong))
+#
 
-#-------------------------------------------------------------------------
+# myfunc = lambda num: int("".join(reqem for reqem in str(num) if int(reqem) % 2 == 0))
+# print(myfunc(5486945))
+
+myfunc = lambda num: int("".join(reqem for reqem in str(num) if int(reqem) in [2, 3, 5, 7]))
+print(myfunc(234636357))
+
+
+# -------------------------------------------------------------------------
 
 # def matris_rec(n1, n2):
 #     if n1 == 1 and n2 == 1:
@@ -1147,38 +1159,85 @@ mylist = [4, 6, 2, 23, 0, 1, 9, -5, 2]
 # import numpy as np
 
 
-def kapitsa_model(initial_population, birth_rate, death_rate, migration_rate, years):
-    population = [initial_population]
+# def kapitsa_model(hazirki_ehali, dogum_derecesi, olum_derecesi, miqrasiya_derecesi, years):
+#     population = [hazirki_ehali]
+#
+#     for year in range(1, years + 1):
+#         dogumlar = population[year - 1] * dogum_derecesi
+#         olumler = population[year - 1] * olum_derecesi
+#         mqirasiyalar = population[year - 1] * miqrasiya_derecesi
+#
+#         new_population = population[year - 1] + dogumlar - olumler + mqirasiyalar
+#         population.append(new_population)
+#
+#     return population
+#
+#
+# # Başlanğıc əhali sayı
+# hazirki_ehali = 10000000
+#
+# # Doğum dərəcəsi
+# dogum_derecesi = 0.02
+#
+# # Ölüm dərəcəsi
+# olum_derecesi = 0.01
+#
+# # Göç dərəcəsi
+# miqrasiya_derecesi = 0.005
+#
+# # Proqnozlaşdırılacaq illərin sayı
+# years = 10
+#
+# # Kapitsa modelinin tətbiqi
+# poplulyasiya_neticesi = kapitsa_model(hazirki_ehali, dogum_derecesi, olum_derecesi, miqrasiya_derecesi, years)
+#
+# # Proqnozlaşdırılmış əhali sayı çıxışı
+# for year in range(len(poplulyasiya_neticesi)):
+#     print(f"{year}: {int(poplulyasiya_neticesi[year])}")
+#
+#
+#
+#
+#
 
-    for year in range(1, years + 1):
-        births = population[year - 1] * birth_rate
-        deaths = population[year - 1] * death_rate
-        migrations = population[year - 1] * migration_rate
+# num = int(input("eded: "))
+#
+# print("boyuk" if num > 5 else "beraber" if num == 5 else "kicik")
 
-        new_population = population[year - 1] + births - deaths + migrations
-        population.append(new_population)
+# def sup_func(x, y):
+#     return x ** y
+#
+#
+# print(sup_func(y=4, x=3))
 
-    return population
+
+# ----------------------------------
+
+#
 
 
-# Başlanğıc əhali sayı
-initial_population = 1000000
+def sade_eded(num):
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+        return True
 
-# Doğum dərəcəsi
-birth_rate = 0.02
 
-# Ölüm dərəcəsi
-death_rate = 0.01
+# #
+# #
+# # free_str = ""
+# myfunc = lambda num: [reqem if sade_eded(int("".join(reqem) for reqem in str(num))) == True]
+myfunc = lambda num: ["".join(reqem) for reqem in str(num) if sade_eded(int("".join(reqem)))]
+print(myfunc(2351))
 
-# Göç dərəcəsi
-migration_rate = 0.005
-
-# Proqnozlaşdırılacaq illərin sayı
-years = 200
-
-# Kapitsa modelinin tətbiqi
-population_projection = kapitsa_model(initial_population, birth_rate, death_rate, migration_rate, years)
-
-# Proqnozlaşdırılmış əhali sayı çıxışı
-for year in range(len(population_projection)):
-    print(f"{year}: {int(population_projection[year])}")
+# # print(list(myfunc(4582)))
+# yas = 25.3
+#
+# mesaj = "Mənim adım %s və mənim yaşım %d." % (ad, yas)
+# print(mesaj)
+#
+# print(i for i in (1, 2, 3))
+a = 3
+print(f"salam {a}")
+print("salam {}".format(a))
+print("salam %d" %a)
