@@ -1144,8 +1144,8 @@ mylist = [4, 6, 2, 23, 0, 1, 9, -5, 2]
 # myfunc = lambda num: int("".join(reqem for reqem in str(num) if int(reqem) % 2 == 0))
 # print(myfunc(5486945))
 
-myfunc = lambda num: int("".join(reqem for reqem in str(num) if int(reqem) in [2, 3, 5, 7]))
-print(myfunc(234636357))
+# myfunc = lambda num: int("".join(reqem for reqem in str(num) if int(reqem) in [2, 3, 5, 7]))
+# print(myfunc(234636357))
 
 
 # -------------------------------------------------------------------------
@@ -1216,19 +1216,19 @@ print(myfunc(234636357))
 #
 
 
-def sade_eded(num):
-    for i in range(2, num):
-        if num % i == 0:
-            return False
-        return True
-
-
-# #
-# #
+# def sade_eded(num):
+#     for i in range(2, num):
+#         if num % i == 0:
+#             return False
+#         return True
+#
+#
+# # #
+# # #
 # # free_str = ""
 # myfunc = lambda num: [reqem if sade_eded(int("".join(reqem) for reqem in str(num))) == True]
-myfunc = lambda num: ["".join(reqem) for reqem in str(num) if sade_eded(int("".join(reqem)))]
-print(myfunc(2351))
+# myfunc = lambda num: ["".join(reqem) for reqem in str(num) if sade_eded(int("".join(reqem)))]
+# print(myfunc(2351))
 
 # # print(list(myfunc(4582)))
 # yas = 25.3
@@ -1237,7 +1237,47 @@ print(myfunc(2351))
 # print(mesaj)
 #
 # print(i for i in (1, 2, 3))
-a = 3
-print(f"salam {a}")
-print("salam {}".format(a))
-print("salam %d" %a)
+# a = 3
+# print(f"salam {a}")
+# print("salam {}".format(a))
+# print("salam %d" % a)
+
+# ---------------------------------------------------
+# def en_yuksek_mertebe(eded):
+#     if eded < 10:
+#         return 1
+#     else:
+#         return 10 * en_yuksek_mertebe(eded // 10)
+#
+#
+# print(en_yuksek_mertebe(287462874))
+
+# ---------------------------------------------------------
+
+mystr = "Ders basladi"
+
+
+def reverse_str(mystr):
+    if len(mystr) == 0:
+        return mystr
+    return reverse_str(mystr[1:]) + mystr[0]
+
+
+print(reverse_str(mystr))
+
+# #
+# print(mystr[::-1])
+
+#
+# adlar = ['Web-Back', 'Data', 'Front']
+# ad_uzunluglari = {name: len(name) for name in adlar}
+# print(ad_uzunluglari)
+# newList = [soz for soz in adlar if len(soz) > 4]
+# print(newList)
+#
+# my_tuple = (reqem for reqem in range(5))
+# print(type(my_tuple))
+# print(tuple(my_tuple))
+
+
+
