@@ -1253,17 +1253,17 @@ mylist = [4, 6, 2, 23, 0, 1, 9, -5, 2]
 # print(en_yuksek_mertebe(287462874))
 
 # ---------------------------------------------------------
-
-mystr = "Ders basladi"
-
-
-def reverse_str(mystr):
-    if len(mystr) == 0:
-        return mystr
-    return reverse_str(mystr[1:]) + mystr[0]
-
-
-print(reverse_str(mystr))
+#
+# mystr = "Ders basladi"
+#
+#
+# def reverse_str(mystr):
+#     if len(mystr) == 0:
+#         return mystr
+#     return reverse_str(mystr[1:]) + mystr[0]
+#
+#
+# print(reverse_str(mystr))
 
 # #
 # print(mystr[::-1])
@@ -1280,4 +1280,78 @@ print(reverse_str(mystr))
 # print(tuple(my_tuple))
 
 
+# x = 30
+# y = 40
+# if x >= 0: # True
+#     if x <= 100: # True
+#         y = x * 3 # y = 90
+#         if y < 50: # False
+#             x //= 10
+#     else:
+#         y = x * 2
+# else:
+#     y = -x
+# print(x, y) # netice : 30,90
+#
+#
+# n = 10
+# if n > 0: # True
+#     print("1",end=' ')
+#     if n%3 != 0: # True
+#         print("0",end=' ')
+#     else:
+#         print("1",end=' ')
+# else:
+#     print("0",end=' ')
+#  #netice : 1 0
 
+
+# i = 1
+# m = 3
+# while m < 20:
+#     print(m, end=' ') # neticeler: 3,6,18
+#     i += 1 # 2, 3, 4
+#     m *= i # 6, 18, 72
+
+#
+# n = 20182019
+# x = 0
+# while n > 0:
+#     x = x + n % 10  # 9, 10, 10, 12,20, 21,21,23
+#     if n // 1000 < 10:  #
+#         print(n)
+#         break
+#     n = n // 10
+# print(x)
+
+
+n = 609432232423423
+test = 9
+while n > 0:
+     r = n%10
+     if r > test:
+        test = r
+     n //= 10
+print(test)
+
+
+def kPrimeFactor(n,k) :
+    while (n % 2 == 0) :
+     k = k - 1
+     n = n / 2
+     if (k == 0) :
+        return 2
+    i = 3
+    while i <= math.sqrt(n) :
+        while (n % i == 0) :
+            if (k == 1) :
+                return i
+             k = k - 1
+             n = n / i
+        i = i + 2
+        if (n > 2 and k == 1) :
+            return n
+        return -1
+n = 12
+k = 3
+print(kPrimeFactor(n, k))
