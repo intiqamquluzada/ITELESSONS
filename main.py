@@ -259,6 +259,7 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 
 # 1) 1-dən 100-dək ədədlər içində neçə ədəddə istifadəçi tərəfindən daxil edilən rəqəm var?
 # eded = int(input("Ededi daxil edin: "))
+
 # saygac = 0
 # for i in range(1, 101):
 #     if str(eded) in str(i):
@@ -267,6 +268,18 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 
 # 2) 1-dən 100-dək ədədlər içində ümumilikdə istifadəçidən götürülən rəqəm neçə dəfə istifadə olunmuşdur?
 # eded = input("Ededi daxil edin: ")
+
+
+"""
+1234567891011121314151617181920
+"""
+
+
+
+
+
+
+
 # a = ""
 # for i in range(1, 101):
 #     a += str(i)
@@ -448,10 +461,22 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 
 # 5) Daxil edilən çoxrəqəmli ədədin hər bir rəqəmini və onun sayını lüğət elementləri kimi bir lüğət daxilində göstərin.
 # eded = input("Ededi daxil edin: ")
+#
 # mydict = {}
 # for reqem in eded:
+#     print(eded.count(reqem))
 #     mydict[reqem] = eded.count(reqem)
 # print(mydict)
+
+
+
+
+
+"""
+
+
+
+"""
 
 
 # ------------------
@@ -1324,34 +1349,34 @@ mylist = [4, 6, 2, 23, 0, 1, 9, -5, 2]
 #     n = n // 10
 # print(x)
 
-
-n = 609432232423423
-test = 9
-while n > 0:
-     r = n%10
-     if r > test:
-        test = r
-     n //= 10
-print(test)
-
-
-def kPrimeFactor(n,k) :
-    while (n % 2 == 0) :
-     k = k - 1
-     n = n / 2
-     if (k == 0) :
-        return 2
-    i = 3
-    while i <= math.sqrt(n) :
-        while (n % i == 0) :
-            if (k == 1) :
-                return i
-             k = k - 1
-             n = n / i
-        i = i + 2
-        if (n > 2 and k == 1) :
-            return n
-        return -1
-n = 12
-k = 3
-print(kPrimeFactor(n, k))
+#
+# n = 609432232423423
+# test = 9
+# while n > 0:
+#      r = n%10
+#      if r > test:
+#         test = r
+#      n //= 10
+# print(test)
+#
+#
+# def kPrimeFactor(n,k) :
+#     while (n % 2 == 0) :
+#      k = k - 1
+#      n = n / 2
+#      if (k == 0) :
+#         return 2
+#     i = 3
+#     while i <= math.sqrt(n) :
+#         while (n % i == 0) :
+#             if (k == 1) :
+#                 return i
+#              k = k - 1
+#              n = n / i
+#         i = i + 2
+#         if (n > 2 and k == 1) :
+#             return n
+#         return -1
+# n = 12
+# k = 3
+# print(kPrimeFactor(n, k))
