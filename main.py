@@ -274,12 +274,6 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 1234567891011121314151617181920
 """
 
-
-
-
-
-
-
 # a = ""
 # for i in range(1, 101):
 #     a += str(i)
@@ -287,14 +281,15 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 
 # 3) Daxil edilmiş cümlənin bütün sözlərini alfabetik düzülüşlü sözlərə çevirib nəticəni çap edin.
 
-# cumle = input("Cumleni daxil edin: ")
-# cumle_list = cumle.split()
-# string = ""
-# for i in cumle_list:
-#     soz = "".join(sorted(i))
-#     string = string + soz + " "
-#
-# print(string)
+cumle = input("Cumleni daxil edin: ")
+cumle_list = cumle.split()
+string = ""
+for i in cumle_list:
+    print(sorted(i))
+    soz = "".join(sorted(i))
+    string = string + soz + " "
+
+print(string)
 
 # 4) Verilmiş cümlədə tərsdən yazılışı özü ilə eyni olan (palindromik söz) neçə söz var?
 # cumle = input("Cumleni daxil edin: ")
@@ -327,24 +322,23 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 # 6) Ad və Soyadlardan ibarət siyahı verilir.Bu siyahını istifadə etməklə ad.soyad@trainer.edu.az maillərini
 #    düzəldən Python kodu yazın.
 
-# siyahi = ['Intiqam Quluzade', 'Etibar Vezirov', 'Vali Aliyev', 'Iltifat Quliyev', 'Fateh Quliyev', 'Intiqam Quluzade',
-#           'Intiqam Quluzade', 'Fateh Quliyev']
-# qelib = "@trainer.edu.az"
-# # details = {}
-# details_list = []
-# bos_list = []
-# for i in siyahi:
-#     email_user = ".".join(i.lower().split())
-#     # details[i] = email_user
-#     bos_list.append(email_user)
-#     if bos_list.count(email_user) > 1:
-#         email_user += f"{bos_list.count(email_user)}"
-#     email_user += qelib
-#     details_list.append(email_user)
-#
-#     email_user = ""
-# # print(details)
-# print(details_list)
+siyahi = ['Intiqam Quluzade', 'Etibar Vezirov', 'Vali Aliyev', 'Iltifat Quliyev', 'Fateh Quliyev', 'Intiqam Quluzade',
+          'Intiqam Quluzade', 'Fateh Quliyev']
+qelib = "@trainer.edu.az"
+
+details_list = []
+bos_list = []
+for i in siyahi:
+    email_user = ".".join(i.lower().split())
+    bos_list.append(email_user)
+    if bos_list.count(email_user) > 1:
+        email_user += f"{bos_list.count(email_user)}"
+    email_user += qelib
+    details_list.append(email_user)
+
+    email_user = ""
+
+print(details_list)
 
 # 7) Indi isə 6-cı məsələdə alınan maillər siyahısını götürüb onların əsasında ad və soyadlardan ibarət bir
 #    siyahı düzəldin.
@@ -469,15 +463,11 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 # print(mydict)
 
 
-
-
-
 """
 
 
 
 """
-
 
 # ------------------
 # setir = int(input("Setir sayini daxil edin: "))
@@ -497,32 +487,32 @@ geri qayidir ve yerine qoya qoya gonderilen parametrlere uygun hesablayir
 #         matris[i][j] = saygac
 #         saygac += 1
 # print(matris)
-# # for i in range(setir):
-# #     for j in range(sutun):
-# #         print(matris[i][j], end=" ")
-# #     print()
-#
+# for i in range(setir):
+#     for j in range(sutun):
+#         print(matris[i][j], end=" ")
+#     print()
+
 # for row in matris:
 #     print(row)
 # ------------------------------------------
 
-# setir = int(input("Setir sayini daxil edin: "))
-# sutun = int(input("Sutun sayini daxil edin: "))
-# matris = []
-#
-#
-# for i in range(setir):
-#     sira = []
-#     for j in range(sutun):
-#         sira.append(0)
-#     matris.append(sira)
-#
-#
-# for i in range(setir):
-#     for j in range(sutun):
-#         if i == j:
-#             matris[i][j] = 1
-# print(matris)
+setir = int(input("Setir sayini daxil edin: "))
+sutun = int(input("Sutun sayini daxil edin: "))
+matris = []
+
+
+for i in range(setir):
+    sira = []
+    for j in range(sutun):
+        sira.append(0)
+    matris.append(sira)
+
+
+for i in range(setir):
+    for j in range(sutun):
+        if i == j:
+            matris[i][j] = 1
+print(matris)
 
 # -----------------------------------------
 
@@ -1380,3 +1370,88 @@ mylist = [4, 6, 2, 23, 0, 1, 9, -5, 2]
 # n = 12
 # k = 3
 # print(kPrimeFactor(n, k))
+
+
+# try:
+#     a = int(input())
+#     print(1/a)
+# except Exception as e:
+#     print(e)
+
+
+def divider(lst, num):
+    new_list = []
+    for i in lst:
+        try:
+            new_list.append(i % num)
+        except Exception as e:
+            continue
+    return new_list
+
+
+print(divider([2, 3, 4, 2, 's', 5, 3], 2))
+
+#
+# def harmonic_mean(*args):
+#     sum = 0
+#     uzunluq = 0
+#     for i in args:
+#         try:
+#             sum += (1 / int(i))
+#             uzunluq += 1
+#
+#         except Exception as e:
+#
+#             continue
+#         return uzunluq / sum
+#
+#
+# print(harmonic_mean('3', '4', '2', 's'))
+
+# 3. Açarları rəqəmlər, dəyərləri isə string tipində qiymətlər olan lügətin açarı
+# sadə ədəd olan elementlərinin
+#    dəyərlərinin bütün simvollarının sayını tapın.
+
+
+# mydict = {
+#     1: '1',
+#     2: '47',
+#     47: '3s',
+#     41: '0'
+# }
+#
+# mylst = []
+# for value in mydict:
+#     try:
+#         for i in range(2, int(mydict[value])):
+#             if int(mydict[value]) % i == 0:
+#                 continue
+#         else:
+#             mylst.append(mydict[value])
+#     except Exception as e:
+#         continue
+#
+# print(mylst)
+
+
+# Example 1:
+#
+# Input: nums = [-1,2,1,-4], target = 1
+# Output: 2
+# Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
+# Example 2:
+#
+# Input: nums = [0,0,0], target = 1
+# Output: 0
+# Explanation: The sum that is closest to the target is 0. (0 + 0 + 0 = 0).
+
+
+sentence = input('Enter sentence: ').split()
+
+for word in sentence:
+    mylst = []
+    for alpha in word:
+        mylst.append(alpha)
+        x = " ".join(sorted(mylst))
+
+print(sentence)
