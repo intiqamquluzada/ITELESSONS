@@ -1,6 +1,6 @@
 # phrase = ['biz', 'print', 'funksiyasina', 'baxiriq', 've', 'tetbiq', 'edirik']
 #
-#
+#abdhuadbaw
 # for word in phrase:
 #     print(word, end=' ')
 # print()
