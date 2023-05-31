@@ -1,6 +1,6 @@
 # phrase = ['biz', 'print', 'funksiyasina', 'baxiriq', 've', 'tetbiq', 'edirik']
 #
-#abdhuadbaw
+# abdhuadbaw
 # for word in phrase:
 #     print(word, end=' ')
 # print()
@@ -500,13 +500,11 @@ setir = int(input("Setir sayini daxil edin: "))
 sutun = int(input("Sutun sayini daxil edin: "))
 matris = []
 
-
 for i in range(setir):
     sira = []
     for j in range(sutun):
         sira.append(0)
     matris.append(sira)
-
 
 for i in range(setir):
     for j in range(sutun):
@@ -945,6 +943,7 @@ def four_metrics(lst):
 
 
 mylist = [4, 6, 2, 23, 0, 1, 9, -5, 2]
+
 
 # m1 = four_metrics(mylist)[0]
 # m2 = four_metrics(mylist)[1]
@@ -1446,12 +1445,21 @@ print(divider([2, 3, 4, 2, 's', 5, 3], 2))
 # Explanation: The sum that is closest to the target is 0. (0 + 0 + 0 = 0).
 
 
-sentence = input('Enter sentence: ').split()
-
-for word in sentence:
-    mylst = []
-    for alpha in word:
-        mylst.append(alpha)
-        x = " ".join(sorted(mylst))
-
-print(sentence)
+# a = int(input("baslangic: "))
+# b = int(input("son: "))
+# with open("ededler.txt", "w") as fayl:
+#     for num in range(a, b + 1):
+#         fayl.write(str(num) + "\n")
+#
+# sade_ededler = []
+# with open("ededler.txt", "r") as fayl:
+#     for setir in fayl:
+#         num = int(setir.strip())
+#         if num > 1:
+#             for i in range(2, num):
+#                 if (num % i) == 0:
+#                     break
+#             else:
+#                 sade_ededler.append(num)
+#
+# print(sade_ededler)
