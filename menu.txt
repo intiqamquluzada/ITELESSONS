@@ -1,0 +1,20 @@
+eng_menu = {
+    'num1': 'Enter the first number: ',
+    'num2': 'Enter the second number: ',
+    'operation': 'Enter the operation: (+,-,*,/,%,**) -> ',
+    'result': 'Result: ',
+}
+
+ru_menu = {
+    'num1': 'Введите первое число: ',
+    'num2': 'Введите второе число: ',
+    'operation': 'Введите транзакцию: ',
+    'result': 'Результат: ',
+}
+
+az_menu = {
+    'num1': 'Birinci ədədi daxil edin: ',
+    'num2': 'Ikinci ədədi daxil edin: ',
+    'operation': 'Əməliyyatı daxil edin: (+,-,*,/,%,**) -> ',
+    'result': 'Netice: ',
+}
