@@ -1,7 +1,7 @@
 eng_menu = {
     'num1': 'Enter the first number: ',
     'num2': 'Enter the second number: ',
-    'operation': 'Enter the operation: (+,-,*,/,%,**) -> ',
+    'operation': 'Enter the operation: (+,-,,*,/,%,**) -> ',
     'result': 'Result: ',
 }
 
